@@ -44,18 +44,35 @@
           <option value="ge" id="dropdown">Germany</option>
         </select>
 
-        <label for="female">Female</label>
+        <label for="gender">Gender</label>
         <input id="female" name="gender" value="female" type="radio" />
-        <label for="male">Male</label>
+        <label class="left-label" for="female">Female</label>
+
         <input id="male" name="gender" value="male" type="radio" />
+        <label class="left-label" for="male">Male</label>
 
         <label for="bio">Biography</label>
         <textarea id="bio"></textarea>
 
-        <label for="subscribe">Stay updated via email</label>
-        <input id="subscribe" name="checks" value="subscribe" type="checkbox" />
-        <label for="agree">I agree to the terms and conditions</label>
-        <input id="agree" name="checks" value="agree" type="checkbox" />
+        <label for="checks">Finalize</label>
+        <div class="formrow">
+          <input
+            id="subscribe"
+            name="checks"
+            value="subscribe"
+            type="checkbox"
+          />
+          <label class="left-label" for="subscribe"
+            >Stay updated via email</label
+          >
+        </div>
+
+        <div class="formrow">
+          <input id="agree" name="checks" value="agree" type="checkbox" />
+          <label class="left-label" for="agree"
+            >I agree to the terms and conditions</label
+          >
+        </div>
 
         <button id="submit">Submit</button>
       </form>

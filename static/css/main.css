@@ -1,2 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+:root {
+  --primary-color: #423d6d;
+  --secondary-color: #6d423d;
+  --tertiary-color: #3d6d42;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background: url("http://www.free-icons-download.net/images/small-down-arrow-icon-15593.png");
+  background-repeat: no-repeat;
+  background-size: 16px 17px;
+  background-position: right;
+  background-origin: content-box;
+  background-color: white;
+  border: none;
+}
+
 body {
+  font-family: "Nunito", sans-serif;
+  background: var(--tertiary-color);
+}
+
+main {
+  margin: 1em;
+  text-align: center;
+}
+
+form {
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: 3px solid var(--primary-color);
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  position: relative;
+  border: 2px solid var(--secondary-color);
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: var(--primary-color);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 2.5em;
+  position: relative;
+  margin: 0.5em;
+}
+
+h1:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background: var(--primary-color);
+  left: 100;
+  top: 47px;
+  border-radius: 1em;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.left-label {
+  display: unset;
+  font-weight: normal;
+  margin-right: 2em;
+}
+
+.error {
+  display: none;
+}
+
+#submit {
+  display: block;
+  margin: 1em 0;
+  padding: 0.5em 2em;
+  border-radius: 0;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.2em;
+}
+
+@media (min-width: 550px) {
+  main {
+    display: none;
+  }
 }
