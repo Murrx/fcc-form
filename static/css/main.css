@@ -77,12 +77,49 @@ input[type="radio"] {
 input[type="radio"]:checked::before {
   content: "";
   position: absolute;
-  top: 1px;
-  left: 1px;
   background: var(--primary-color);
-  width: 14px;
-  height: 14px;
+  left: -1;
+
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
+}
+
+input[type="checkbox"] {
+  display: none;
+  pointer-events: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 3fr;
+}
+
+input[type="checkbox"]:checked + label .check {
+  stroke-dashoffset: 0;
+}
+
+svg {
+  width: 2em;
+  stroke: var(--primary-color);
+  stroke-width: 3;
+  fill: white;
+}
+
+.box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+.check {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  stroke: var(--primary-color);
+  fill: none;
+  transition: stroke-dashoffset 0.3s linear;
 }
 
 h1 {
