@@ -176,7 +176,15 @@ label {
 }
 
 @media (min-width: 550px) {
-  main {
-    display: none;
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fraction 1fr 1fr;
+    grid-gap: 1em;
+    align-items: top;
+  }
+
+  .formrow {
+    height: 80px;
   }
 }
