@@ -28,12 +28,15 @@ select {
 
 body {
   font-family: "Nunito", sans-serif;
-  background: var(--tertiary-color);
+  background: #407245;
 }
 
 main {
-  margin: 1em;
+  background: var(--tertiary-color);
+  padding: 1em;
   text-align: center;
+  margin: auto;
+  max-width: 800px;
 }
 
 form {
@@ -186,5 +189,13 @@ label {
 
   .formrow {
     height: 80px;
+  }
+}
+
+@media (min-width: 850px) {
+  main {
+  }
+
+  body {
   }
 }
