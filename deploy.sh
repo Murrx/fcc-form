@@ -15,6 +15,7 @@ then
     git config user.name "murrx-bot"
 fi
 
+git checkout gh-pages
 git add .
 git commit -m "Rebuild site"
 git push --force origin gh-pages
